@@ -6,7 +6,7 @@
 /*   By: mamatter <mamatter@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/21 14:04:54 by mamatter          #+#    #+#             */
-/*   Updated: 2026/10/21 16:44:48 by mamatter         ###   ########.fr       */
+/*   Updated: 2026/10/23 14:20:51 by mamatter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_strrchr(const char *s, int c)
 
 	i = 0;
 	k = 0;
+	if (c == 0)
+		return ("");
 	while (s[i])
 	{
 		if (s[i] == (char)c)
