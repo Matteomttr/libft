@@ -6,7 +6,7 @@
 /*   By: mamatter <mamatter@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/23 10:07:55 by mamatter          #+#    #+#             */
-/*   Updated: 2026/10/23 15:18:29 by mamatter         ###   ########.fr       */
+/*   Updated: 2026/10/23 17:08:41 by mamatter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ static int	count_word(char const *s, char c)
 
 	i = 0;
 	len = 0;
+	if (!s)
+		return (0);
 	while (s[i])
 	{
 		if (s[i] != c)
@@ -38,7 +40,7 @@ static int	count_word(char const *s, char c)
 static char	*select_str(const char *src, unsigned int debut, unsigned int fin)
 {
 	unsigned int	i;
-	char	*dest;
+	char			*dest;
 
 	i = 0;
 	dest = ft_calloc((fin - debut + 1), sizeof(char *));
@@ -60,7 +62,7 @@ char	**ft_split(char const *s, char c)
 	i = 0;
 	a = 0;
 	lst = ft_calloc(count_word(s, c) + 1, sizeof(char *));
-	if (!lst)
+	if (!lst || !s)
 		return (NULL);
 	while (s[i])
 	{
@@ -76,21 +78,4 @@ char	**ft_split(char const *s, char c)
 			i++;
 	}
 	return (lst);
-}
-
-int	main(int argc, char **argv)
-{
-	char	**lst;
-	int	i = 0;
-	(void)argc;
-
-	lst = ft_split(argv[1], ' ');
-	while (lst[i] != NULL)
-	{
-		printf("%s, ", lst[i]);
-		free(lst[i]);
-		i++;
-	}
-	free(lst);
-	return (0);
 }

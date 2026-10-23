@@ -6,7 +6,7 @@
 /*   By: mamatter <mamatter@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/21 16:49:50 by mamatter          #+#    #+#             */
-/*   Updated: 2026/10/22 17:17:26 by mamatter         ###   ########.fr       */
+/*   Updated: 2026/10/23 17:11:53 by mamatter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 
 	i = 0;
 	delta = 0;
-	while (i < s)
+	while (i < n)
 	{
-		delta = ((unsigned char *)p1)[i] - ((unsigned char *)p2)[i];
+		delta = ((unsigned char *)s1)[i] - ((unsigned char *)s2)[i];
 		if (delta)
 			return (delta);
 		i++;

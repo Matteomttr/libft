@@ -6,7 +6,7 @@
 /*   By: mamatter <mamatter@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/21 16:08:08 by mamatter          #+#    #+#             */
-/*   Updated: 2026/10/22 17:16:33 by mamatter         ###   ########.fr       */
+/*   Updated: 2026/10/23 16:15:26 by mamatter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	size_t	i;
 
 	i = 0;
-	while (i < s)
+	while (i < n)
 	{
 		if (((unsigned char *)s)[i] == c)
 			return (&(((void *)s)[i]));
