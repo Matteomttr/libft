@@ -6,7 +6,7 @@
 /*   By: mamatter <mamatter@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/24 09:25:20 by mamatter          #+#    #+#             */
-/*   Updated: 2026/10/24 10:32:09 by mamatter         ###   ########.fr       */
+/*   Updated: 2026/10/24 10:50:50 by mamatter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 		return ;
 	while (s[i])
 	{
-		// printf("%c\n%s\n", s[i], s + i);
 		f(i, s + i);
 		i++;
 	}

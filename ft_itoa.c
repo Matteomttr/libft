@@ -6,7 +6,7 @@
 /*   By: mamatter <mamatter@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/23 15:59:22 by mamatter          #+#    #+#             */
-/*   Updated: 2026/10/23 17:08:20 by mamatter         ###   ########.fr       */
+/*   Updated: 2026/10/24 11:28:55 by mamatter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,13 +88,4 @@ char	*ft_itoa(int n)
 		str[i - 1] = '-';
 	str = ft_rev_int_tab(str, len);
 	return (str);
-}
-
-int	main()
-{
-	char	*str;
-	int	nb = -1623751341;
-	str = ft_itoa(nb);
-	printf("%s", str);
-	free(str);
 }
