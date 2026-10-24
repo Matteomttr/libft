@@ -6,7 +6,7 @@
 /*   By: mamatter <mamatter@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/23 15:59:22 by mamatter          #+#    #+#             */
-/*   Updated: 2026/10/24 11:28:55 by mamatter         ###   ########.fr       */
+/*   Updated: 2026/10/24 12:25:27 by mamatter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,8 @@ static int	nbrlen(int nb)
 
 static char	*reelitoa(char *str, int n, int *i, int len)
 {
+	if (n < 0)
+		n = -n;
 	while (*i < len)
 	{
 		if (n == 0)
@@ -68,23 +70,19 @@ char	*ft_itoa(int n)
 	char	*str;
 	int		len;
 	int		i;
-	int		j;
 
 	i = 0;
-	j = 0;
 	len = nbrlen(n);
 	str = ft_calloc((len + 1), sizeof(char));
 	if (!str)
 		return (NULL);
 	if (n == -2147483648)
-		str = "-2147483648";
-	if (n < 0)
 	{
-		j = 1;
-		n = -n;
+		ft_strcpy(str, "-2147483648");
+		return (str);
 	}
 	str = reelitoa(str, n, &i, len);
-	if (j == 1)
+	if (n < 0)
 		str[i - 1] = '-';
 	str = ft_rev_int_tab(str, len);
 	return (str);
