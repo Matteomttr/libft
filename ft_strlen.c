@@ -6,7 +6,7 @@
 /*   By: mamatter <mamatter@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/20 10:08:36 by mamatter          #+#    #+#             */
-/*   Updated: 2026/10/22 17:13:09 by mamatter         ###   ########.fr       */
+/*   Updated: 2026/10/24 19:47:03 by mamatter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ size_t	ft_strlen(const char *s)
 	size_t	i;
 
 	i = 0;
-	if (s == 0)
-		return (0);
 	while (s[i])
 		i++;
 	return (i);
