@@ -67,5 +67,3 @@ cc -Wall -Wextra -Werror main.c -L. -lft -o my_program
 
 - `man` pages of the reimplemented functions (`man 3 strlen`, etc.)
 - GNU Make manual: https://www.gnu.org/software/make/manual/
-- `man ar`
-- The C Programming Language, Kernighan & Ritchie
