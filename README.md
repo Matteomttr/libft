@@ -110,4 +110,4 @@ typedef struct s_list
 
 ### Use of AI
 
-No AI was used for this project.
+Minimal use of artificial intelligence for sentence structuring in the README, and that’s it.
