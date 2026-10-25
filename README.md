@@ -110,5 +110,4 @@ typedef struct s_list
 
 ### Use of AI
 
-<Describe which tasks and which parts of the project AI helped with,
-or write: "No AI was used for this project.">
+No AI was used for this project.
