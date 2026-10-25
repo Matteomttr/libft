@@ -66,4 +66,4 @@ cc -Wall -Wextra -Werror main.c -L. -lft -o my_program
 ### References
 
 - `man` pages of the reimplemented functions (`man 3 strlen`, etc.)
-- Free manual: [https://www.gnu.org/software/make/manual/](http://manpagesfr.free.fr/)
+- Free manual: http://manpagesfr.free.fr/
