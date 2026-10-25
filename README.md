@@ -22,16 +22,6 @@ make fclean # remove object files and libft.a
 make re     # rebuild everything
 ```
 
-To use it, include the header and link the library:
-
-```c
-#include "libft.h"
-```
-
-```bash
-cc -Wall -Wextra -Werror main.c -L. -lft -o my_program
-```
-
 ## Library description
 
 ### Part 1 - Libc functions
