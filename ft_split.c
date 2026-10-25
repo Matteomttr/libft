@@ -6,7 +6,7 @@
 /*   By: mamatter <mamatter@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/23 10:07:55 by mamatter          #+#    #+#             */
-/*   Updated: 2026/10/25 12:50:32 by mamatter         ###   ########.fr       */
+/*   Updated: 2026/10/25 14:52:31 by mamatter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,14 +37,14 @@ static int	count_word(char const *s, char c)
 	return (len);
 }
 
-static char	*select_str(const char *src, unsigned int start, unsigned int fin)
+static char	*select_str(const char *src, unsigned int start, unsigned int end)
 {
 	unsigned int	i;
 	char			*dest;
 
 	i = 0;
-	dest = ft_calloc((fin - start + 1), sizeof(char *));
-	while (start + i != fin && src[i])
+	dest = ft_calloc((end - start + 1), sizeof(char *));
+	while (start + i != end && src[i])
 	{
 		dest[i] = src[start + i];
 		i++;
