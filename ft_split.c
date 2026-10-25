@@ -6,12 +6,11 @@
 /*   By: mamatter <mamatter@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/23 10:07:55 by mamatter          #+#    #+#             */
-/*   Updated: 2026/10/25 14:52:31 by mamatter         ###   ########.fr       */
+/*   Updated: 2026/10/25 15:10:51 by mamatter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static int	count_word(char const *s, char c)
 {
@@ -33,7 +32,6 @@ static int	count_word(char const *s, char c)
 		else
 			i++;
 	}
-	printf("%d\n", len);
 	return (len);
 }
 
