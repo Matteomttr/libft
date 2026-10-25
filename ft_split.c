@@ -6,7 +6,7 @@
 /*   By: mamatter <mamatter@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/23 10:07:55 by mamatter          #+#    #+#             */
-/*   Updated: 2026/10/23 17:08:41 by mamatter         ###   ########.fr       */
+/*   Updated: 2026/10/25 12:50:32 by mamatter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,16 +37,16 @@ static int	count_word(char const *s, char c)
 	return (len);
 }
 
-static char	*select_str(const char *src, unsigned int debut, unsigned int fin)
+static char	*select_str(const char *src, unsigned int start, unsigned int fin)
 {
 	unsigned int	i;
 	char			*dest;
 
 	i = 0;
-	dest = ft_calloc((fin - debut + 1), sizeof(char *));
-	while (debut + i != fin && src[i])
+	dest = ft_calloc((fin - start + 1), sizeof(char *));
+	while (start + i != fin && src[i])
 	{
-		dest[i] = src[debut + i];
+		dest[i] = src[start + i];
 		i++;
 	}
 	return (dest);
@@ -56,7 +56,7 @@ char	**ft_split(char const *s, char c)
 {
 	char	**lst;
 	int		i;
-	int		debut;
+	int		start;
 	int		a;
 
 	i = 0;
@@ -68,10 +68,10 @@ char	**ft_split(char const *s, char c)
 	{
 		if (s[i] != c)
 		{
-			debut = i;
+			start = i;
 			while (s[i] && s[i] != c)
 				i++;
-			lst[a] = select_str(s, debut, i);
+			lst[a] = select_str(s, start, i);
 			a++;
 		}
 		else

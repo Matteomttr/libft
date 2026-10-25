@@ -6,7 +6,7 @@
 /*   By: mamatter <mamatter@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/21 17:04:58 by mamatter          #+#    #+#             */
-/*   Updated: 2026/10/22 11:03:21 by mamatter         ###   ########.fr       */
+/*   Updated: 2026/10/25 13:21:33 by mamatter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	int	i;
-	int	j;
+	size_t	i;
+	size_t	j;
 
 	if (little[0] == '\0')
 		return ((char *)big);
