@@ -6,7 +6,7 @@
 /*   By: mamatter <mamatter@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/21 15:21:08 by mamatter          #+#    #+#             */
-/*   Updated: 2026/10/25 15:42:19 by mamatter         ###   ########.fr       */
+/*   Updated: 2026/10/26 11:32:15 by mamatter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	while (i < n && (s1[i] || s2[i]))
 	{
 		if (s1[i] != s2[i])
-			return (s1[i] - s2[i]);
+			return (((unsigned char)s1[i] - s2[i]));
 		i++;
 	}
 	return (0);

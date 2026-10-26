@@ -6,7 +6,7 @@
 /*   By: mamatter <mamatter@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/21 11:11:50 by mamatter          #+#    #+#             */
-/*   Updated: 2026/10/24 09:35:25 by mamatter         ###   ########.fr       */
+/*   Updated: 2026/10/26 12:07:05 by mamatter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,18 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	int	i;
+	int		i;
+	char	*output;
 
 	i = 0;
-	if (c == 0)
-		return ("");
+	output = (char *)s;
 	while (s[i])
 	{
 		if (s[i] == (char)c)
-			return (&((char *)s)[i]);
+			return (output + i);
 		i++;
 	}
-	if ((char)c == '\0')
-		return ((char *)s);
+	if (s[i] == (char)c)
+		return (output + i);
 	return (NULL);
 }
