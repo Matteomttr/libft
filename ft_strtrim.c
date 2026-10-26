@@ -6,7 +6,7 @@
 /*   By: mamatter <mamatter@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/22 14:38:07 by mamatter          #+#    #+#             */
-/*   Updated: 2026/10/25 11:33:57 by mamatter         ###   ########.fr       */
+/*   Updated: 2026/10/26 16:33:59 by mamatter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,9 @@ char	*ft_strtrim(char const *s1, char const *set)
 		start++;
 	while (end != start && ft_strchr(set, s1[end]))
 		end--;
+	i = end - start + 1;
+	res = ft_calloc(sizeof(char *), i);
 	i = 0;
-	res = malloc(end - start + 1);
 	if (!res)
 		return (NULL);
 	while (i < end - start + 1)
@@ -36,6 +37,5 @@ char	*ft_strtrim(char const *s1, char const *set)
 		res[i] = s1[start + i];
 		i++;
 	}
-	res[i] = '\0';
 	return (res);
 }

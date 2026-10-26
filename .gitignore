@@ -1,4 +1,4 @@
 a.out
 test.c
 *.o
-libft_tester
+libft.a

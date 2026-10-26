@@ -6,7 +6,7 @@
 /*   By: mamatter <mamatter@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/20 15:53:10 by mamatter          #+#    #+#             */
-/*   Updated: 2026/10/26 12:17:17 by mamatter         ###   ########.fr       */
+/*   Updated: 2026/10/26 15:51:22 by mamatter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,16 +18,17 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	size_t	i;
 
 	i = 0;
+	if (size == 0)
+		return (ft_strlen(src));
 	len = ft_strlen(dst);
-	if (len >= size || !src)
-		return (ft_strlen(src) + len);
+	if (len >= size)
+		return (size + ft_strlen(src));
 	while (i < size - len - 1 && src[i])
 	{
 		dst[i + len] = src[i];
 		i++;
 	}
-	if (size != 0)
-		dst[len + i] = '\0';
+	dst[len + i] = '\0';
 	return (ft_strlen(src) + len);
 }
 

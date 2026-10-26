@@ -6,7 +6,7 @@
 /*   By: mamatter <mamatter@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/24 10:51:16 by mamatter          #+#    #+#             */
-/*   Updated: 2026/10/25 10:08:40 by mamatter         ###   ########.fr       */
+/*   Updated: 2026/10/26 15:55:11 by mamatter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_putstr_fd(char *s, int fd)
 	int	i;
 
 	i = 0;
-	if (fd < 0)
+	if (!s || fd < 0)
 		return ;
 	while (s[i])
 	{
