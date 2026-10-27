@@ -6,7 +6,7 @@
 /*   By: mamatter <mamatter@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/23 10:07:55 by mamatter          #+#    #+#             */
-/*   Updated: 2026/10/26 19:29:56 by mamatter         ###   ########.fr       */
+/*   Updated: 2026/10/27 10:25:52 by mamatter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ static char	*select_str(const char *src, unsigned int start, unsigned int end)
 	char			*dest;
 
 	i = 0;
-	dest = ft_calloc((end - start + 1), sizeof(char *));
+	dest = ft_calloc((end - start + 1), sizeof(char));
 	if (!dest)
 		return (NULL);
 	while (start + i != end && src[i])
@@ -80,7 +80,7 @@ static char	**fill(char **lst, char const *s, char c)
 				i++;
 			lst[a] = select_str(s, start, i);
 			if (!lst[a])
-				return(free_all(lst, a));
+				return (free_all(lst, a));
 			a++;
 		}
 		else
