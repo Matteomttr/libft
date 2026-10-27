@@ -6,12 +6,11 @@
 /*   By: mamatter <mamatter@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/23 15:59:22 by mamatter          #+#    #+#             */
-/*   Updated: 2026/10/26 15:38:44 by mamatter         ###   ########.fr       */
+/*   Updated: 2026/10/27 15:53:15 by mamatter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static char	*ft_strcpy(char *dest, const char *src)
 {

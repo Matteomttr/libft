@@ -6,7 +6,7 @@
 /*   By: mamatter <mamatter@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/24 11:11:41 by mamatter          #+#    #+#             */
-/*   Updated: 2026/10/26 16:23:31 by mamatter         ###   ########.fr       */
+/*   Updated: 2026/10/27 15:56:59 by mamatter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
-	if (fd < 1 || !s)
+	if (fd < 0 || !s)
 		return ;
 	write(fd, s, ft_strlen(s));
 	write(fd, "\n", 1);

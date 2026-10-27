@@ -6,7 +6,7 @@
 /*   By: mamatter <mamatter@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/20 15:53:10 by mamatter          #+#    #+#             */
-/*   Updated: 2026/10/26 15:51:22 by mamatter         ###   ########.fr       */
+/*   Updated: 2026/10/27 16:00:39 by mamatter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,11 +32,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	return (ft_strlen(src) + len);
 }
 
-// #include <string.h>
-
-// int	main()
-// {
-// 	char	dest[4] = "tes";
-// 	printf("%zu\n", ft_strlcat(dest, NULL, sizeof dest));
-// 	printf("%s\n", dest);
-// }

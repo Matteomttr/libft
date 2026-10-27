@@ -6,7 +6,7 @@
 /*   By: mamatter <mamatter@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/20 15:23:06 by mamatter          #+#    #+#             */
-/*   Updated: 2026/10/26 09:38:32 by mamatter         ###   ########.fr       */
+/*   Updated: 2026/10/27 16:00:52 by mamatter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,12 +34,3 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 	dest[i] = '\0';
 	return (len);
 }
-
-// #include <string.h>
-
-// int	main()
-// {
-// 	char	dest[0] = "";
-// 	printf("%zu\n", ft_strlcpy(dest, "hello", 6));
-// 	printf("%s\n", dest);
-// }
