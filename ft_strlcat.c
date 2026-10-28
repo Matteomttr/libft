@@ -6,7 +6,7 @@
 /*   By: mamatter <mamatter@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/20 15:53:10 by mamatter          #+#    #+#             */
-/*   Updated: 2026/10/27 16:00:39 by mamatter         ###   ########.fr       */
+/*   Updated: 2026/10/28 10:26:06 by mamatter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,4 +31,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	dst[len + i] = '\0';
 	return (ft_strlen(src) + len);
 }
-

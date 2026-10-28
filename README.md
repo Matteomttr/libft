@@ -110,4 +110,4 @@ typedef struct s_list
 
 ### Use of AI
 
-Minimal use of artificial intelligence for sentence structuring in the README, and that’s it.
+Minimal use of artificial intelligence for sentence structuring in the README, and for some main.

@@ -6,7 +6,7 @@
 /*   By: mamatter <mamatter@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/25 11:50:01 by mamatter          #+#    #+#             */
-/*   Updated: 2026/10/27 13:26:39 by mamatter         ###   ########.fr       */
+/*   Updated: 2026/10/28 10:24:18 by mamatter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	{
 		content_tmp = f(lst->content);
 		tmp = ft_lstnew(content_tmp);
-		if(!tmp)
+		if (!tmp)
 		{
 			del(content_tmp);
 			ft_lstclear(&new_lst, del);

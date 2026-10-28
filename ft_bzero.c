@@ -3,13 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mamatter <marvin@d42.fr>                   +#+  +:+       +#+        */
+/*   By: mamatter <mamatter@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/20 11:34:24 by mamatter          #+#    #+#             */
-/*   Updated: 2026/10/20 13:58:49 by mamatter         ###   ########.fr       */
+/*   Updated: 2026/10/28 10:26:35 by mamatter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {
