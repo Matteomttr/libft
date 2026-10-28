@@ -6,9 +6,11 @@
 /*   By: mamatter <mamatter@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/20 11:34:24 by mamatter          #+#    #+#             */
-/*   Updated: 2026/10/28 10:26:35 by mamatter         ###   ########.fr       */
+/*   Updated: 2026/10/28 14:06:38 by mamatter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {
