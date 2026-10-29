@@ -6,7 +6,7 @@
 /*   By: mamatter <mamatter@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/24 19:52:52 by mamatter          #+#    #+#             */
-/*   Updated: 2026/10/25 13:19:00 by mamatter         ###   ########.fr       */
+/*   Updated: 2026/10/29 11:15:03 by mamatter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,18 @@
 
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	t_list	*temps;
-	t_list	*lsd;
+	t_list	*tmp;
+	t_list	*lst_tmp;
 
 	if (!lst || !*lst || !del)
 		return ;
-	temps = *lst;
-	while (temps)
+	tmp = *lst;
+	while (tmp)
 	{
-		lsd = temps;
-		temps = temps->next;
-		del(lsd->content);
-		free(lsd);
+		lst_tmp = tmp;
+		tmp = tmp->next;
+		del(lst_tmp->content);
+		free(lst_tmp);
 	}
 	*lst = NULL;
 }

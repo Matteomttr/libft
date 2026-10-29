@@ -6,7 +6,7 @@
 /*   By: mamatter <mamatter@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/20 10:15:54 by mamatter          #+#    #+#             */
-/*   Updated: 2026/10/28 09:28:38 by mamatter         ###   ########.fr       */
+/*   Updated: 2026/10/29 11:16:14 by mamatter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,14 @@ void	*ft_memset(void *s, int c, size_t n)
 {
 	size_t			i;
 	unsigned char	*buffer;
-	unsigned char	replace;
+	unsigned char	rpc;
 
 	buffer = s;
-	replace = c;
+	rpc = c;
 	i = 0;
 	while (i != n)
 	{
-		buffer[i] = replace;
+		buffer[i] = rpc;
 		i++;
 	}
 	return (buffer);
