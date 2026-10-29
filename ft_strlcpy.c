@@ -6,7 +6,7 @@
 /*   By: mamatter <mamatter@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/20 15:23:06 by mamatter          #+#    #+#             */
-/*   Updated: 2026/10/27 16:00:52 by mamatter         ###   ########.fr       */
+/*   Updated: 2026/10/29 12:07:42 by mamatter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,6 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 
 	i = 0;
 	len = ft_strlen(src);
-	if (size == 1)
-	{
-		dest[i] = '\0';
-		return (len);
-	}
 	if (size == 0)
 		return (len);
 	while (src[i] && i < size - 1)
