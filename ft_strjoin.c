@@ -34,13 +34,11 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	if (!s1 || !s2)
 		return (NULL);
-	size_str = ft_strlen(s1) + ft_strlen(s2) + 1;
-	str = malloc(size_str);
+	size_str = ft_strlen(s1) + ft_strlen(s2);
+	str = ft_calloc(sizeof(char), size_str + 1);
 	if (str == NULL)
 		return (NULL);
-	ft_bzero(str, size_str);
 	str = ft_strcat(str, (char *)s1);
 	str = ft_strcat(str, (char *)s2);
-	str[size_str] = '\0';
 	return (str);
 }
