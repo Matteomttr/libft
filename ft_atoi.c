@@ -16,10 +16,10 @@ int	ft_atoi(const char *nptr)
 {
 	int	i;
 	int	sign;
-	int	somme;
+	int	sum;
 
 	i = 0;
-	somme = 0;
+	sum = 0;
 	sign = 1;
 	while (nptr[i] == ' ' || (nptr[i] >= 9 && nptr[i] <= 13))
 		i++;
@@ -31,8 +31,8 @@ int	ft_atoi(const char *nptr)
 	}
 	while (nptr[i] >= '0' && nptr[i] <= '9')
 	{
-		somme = somme * 10 + nptr[i] - '0';
+		sum = sum * 10 + nptr[i] - '0';
 		i++;
 	}
-	return (sign * somme);
+	return (sign * sum);
 }
