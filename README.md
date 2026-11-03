@@ -22,6 +22,38 @@ make fclean # remove object files and libft.a
 make re     # rebuild everything
 ```
 
+### Use the library with your own main
+
+1. Include the header in your `main.c`:
+
+```c
+#include "libft.h"
+
+int	main(void)
+{
+	ft_putendl_fd("Hello libft!", 1);
+	return (0);
+}
+```
+
+2. Build the library, then compile your `main.c` and link it with `libft.a`:
+
+```bash
+make
+cc -Wall -Wextra -Werror main.c -L. -lft -o test
+./test
+```
+
+- `-L.` tells the compiler to look for libraries in the current directory.
+- `-lft` links `libft.a` (the `lib` prefix and `.a` extension are implied).
+- If `libft.h` is in another folder, add `-I path/to/folder`.
+
+If your `main.c` is outside the repository, adapt the paths:
+
+```bash
+cc -Wall -Wextra -Werror main.c -I path/to/libft -L path/to/libft -lft -o test
+```
+
 ## Library description
 
 ### Part 1 - Libc functions
@@ -38,6 +70,8 @@ Each function works like the original, as described in its man page.
 | `ft_toupper` | Turns a lowercase letter into uppercase. |
 | `ft_tolower` | Turns an uppercase letter into lowercase. |
 | `ft_strlen` | Returns the length of a string. |
+| `ft_strcpy` | Copies a string into a buffer. |
+| `ft_strcat` | Appends a string at the end of another. |
 | `ft_strlcpy` | Copies a string into a buffer without overflowing it. |
 | `ft_strlcat` | Appends a string to another without overflowing the buffer. |
 | `ft_strchr` | Finds the first occurrence of a character in a string. |
