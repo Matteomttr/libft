@@ -6,12 +6,13 @@
 /*   By: mamatter <mamatter@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/20 15:53:10 by mamatter          #+#    #+#             */
-/*   Updated: 2026/10/29 11:20:55 by mamatter         ###   ########.fr       */
+/*   Updated: 2026/11/04 16:57:56 by mamatter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/* Appends a string to another without overflowing the buffer. */
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	size_t	d_len;

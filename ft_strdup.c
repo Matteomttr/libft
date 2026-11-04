@@ -6,26 +6,13 @@
 /*   By: mamatter <mamatter@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/22 10:49:56 by mamatter          #+#    #+#             */
-/*   Updated: 2026/10/26 15:28:15 by mamatter         ###   ########.fr       */
+/*   Updated: 2026/11/04 16:54:55 by mamatter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char	*ft_strcpy(char *dest, const char *src)
-{
-	int	i;
-
-	i = 0;
-	while (src[i])
-	{
-		dest[i] = src[i];
-		i++;
-	}
-	dest[i] = '\0';
-	return (dest);
-}
-
+/* Returns a new copy of a string. */
 char	*ft_strdup(const char *s)
 {
 	char	*copy;

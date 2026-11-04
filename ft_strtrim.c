@@ -6,12 +6,13 @@
 /*   By: mamatter <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/30 12:11:02 by mamatter          #+#    #+#             */
-/*   Updated: 2026/10/30 12:11:08 by mamatter         ###   ########.fr       */
+/*   Updated: 2026/11/04 17:08:26 by mamatter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/* Returns a copy of a string without the chosen characters at both ends. */
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	start;

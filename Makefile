@@ -1,8 +1,15 @@
+# The name of the libft archive
 NAME= libft.a
+
+# Compiler + flags for executable
 CC= cc
 CFLAGS= -Wall -Werror -Wextra
+
+# Compiler + flags for archive
 AR= ar
 ARFLAGS= rsc
+
+# List of .c files
 SRCS=	ft_isalpha.c \
 		ft_isdigit.c \
 		ft_isalnum.c \
@@ -49,22 +56,29 @@ SRCS=	ft_isalpha.c \
 		ft_strcat.c \
 		ft_strcpy.c \
 
+# List of .o files
 OBJS= $(SRCS:.c=.o)
 
+# Compile everything
 all: $(NAME)
 
+# Compile everything into an archive
 $(NAME): $(OBJS)
 	$(AR) $(ARFLAGS) $@ $^
 
+# Converts .c files to .o files
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
+# Delete all .o files
 clean:
 	rm -f $(OBJS)
 
+# Delete all .o files and libft.a
 fclean: clean
 	rm -f $(NAME)
 
+# Delete all .o files and libft.a, then recompile everything into an archive.
 re: fclean all
 
 .PHONY: all clean fclean re

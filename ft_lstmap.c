@@ -6,12 +6,13 @@
 /*   By: mamatter <mamatter@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/25 11:50:01 by mamatter          #+#    #+#             */
-/*   Updated: 2026/10/28 10:24:18 by mamatter         ###   ########.fr       */
+/*   Updated: 2026/11/04 16:34:02 by mamatter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/* Builds a new list from the results of a function. */
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*new_lst;

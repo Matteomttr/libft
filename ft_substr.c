@@ -6,12 +6,13 @@
 /*   By: mamatter <mamatter@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/22 13:43:21 by mamatter          #+#    #+#             */
-/*   Updated: 2026/10/27 16:03:42 by mamatter         ###   ########.fr       */
+/*   Updated: 2026/11/04 18:05:22 by mamatter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/* Returns a new string cut from a given position and length. */
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*sub;

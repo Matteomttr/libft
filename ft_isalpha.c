@@ -6,14 +6,17 @@
 /*   By: mamatter <mamatter@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/20 09:25:16 by mamatter          #+#    #+#             */
-/*   Updated: 2026/10/28 10:24:49 by mamatter         ###   ########.fr       */
+/*   Updated: 2026/11/04 16:25:16 by mamatter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
+/* Checks if a character is a letter. */
 int	ft_isalpha(int c)
 {
-	if ((c >= 65 && c <= 90)
-		|| (c >= 97 && c <= 122))
+	if ((c >= 'a' && c <= 'z')
+		|| (c >= 'A' && c <= 'Z'))
 		return (1);
 	return (0);
 }

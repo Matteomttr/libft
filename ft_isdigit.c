@@ -6,13 +6,16 @@
 /*   By: mamatter <mamatter@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/20 09:43:32 by mamatter          #+#    #+#             */
-/*   Updated: 2026/10/28 10:24:02 by mamatter         ###   ########.fr       */
+/*   Updated: 2026/11/04 16:26:11 by mamatter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
+/* Checks if a character is a digit. */
 int	ft_isdigit(int c)
 {
-	if (c >= 48 && c <= 57)
+	if (c >= '0' && c <= '9')
 		return (1);
 	return (0);
 }

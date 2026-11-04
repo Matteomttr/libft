@@ -6,12 +6,13 @@
 /*   By: mamatter <mamatter@student.42angouleme.fr> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/03 13:26:39 by mamatter          #+#    #+#             */
-/*   Updated: 2026/11/03 13:27:03 by mamatter         ###   ########.fr       */
+/*   Updated: 2026/11/04 16:54:35 by mamatter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/* Copies a string into a buffer. */
 char	*ft_strcpy(char *dest, const char *src)
 {
 	int	i;

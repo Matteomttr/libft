@@ -6,12 +6,13 @@
 /*   By: mamatter <mamatter@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/25 09:12:51 by mamatter          #+#    #+#             */
-/*   Updated: 2026/10/25 13:18:16 by mamatter         ###   ########.fr       */
+/*   Updated: 2026/11/04 16:33:25 by mamatter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/* Applies a function to the content of each node. */
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
 	t_list	*tmp;

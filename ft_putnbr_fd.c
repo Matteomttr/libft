@@ -6,12 +6,13 @@
 /*   By: mamatter <mamatter@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/24 11:23:09 by mamatter          #+#    #+#             */
-/*   Updated: 2026/10/26 14:03:07 by mamatter         ###   ########.fr       */
+/*   Updated: 2026/11/04 16:41:49 by mamatter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/* Writes an integer to a file descriptor. */
 void	ft_putnbr_fd(int n, int fd)
 {
 	if (fd < 0)
@@ -27,9 +28,7 @@ void	ft_putnbr_fd(int n, int fd)
 		n = -n;
 	}
 	if (n <= 9)
-	{
 		ft_putchar_fd(n + '0', fd);
-	}
 	else
 	{
 		ft_putnbr_fd(n / 10, fd);

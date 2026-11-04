@@ -3,15 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mamatter <mamatter@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mamatter <mamatter@student.42angouleme.fr> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/10/22 09:19:57 by mamatter          #+#    #+#             */
-/*   Updated: 2026/10/29 11:13:37 by mamatter         ###   ########.fr       */
+/*   Created: 2026/11/02 09:05:32 by mamatter          #+#    #+#             */
+/*   Updated: 2026/11/04 16:23:25 by mamatter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/* Converts the start of a string into an `int`. */
 int	ft_atoi(const char *nptr)
 {
 	int	i;
@@ -23,12 +24,9 @@ int	ft_atoi(const char *nptr)
 	sign = 1;
 	while (nptr[i] == ' ' || (nptr[i] >= 9 && nptr[i] <= 13))
 		i++;
-	if (nptr[i] == '+' || nptr[i] == '-')
-	{
-		if (nptr[i] == '-')
-			sign *= -1;
-		i++;
-	}
+	if (nptr[i] == '-')
+		sign *= -1;
+	i += (nptr[i] == '-' || nptr[i] == '+');
 	while (nptr[i] >= '0' && nptr[i] <= '9')
 	{
 		sum = sum * 10 + nptr[i] - '0';

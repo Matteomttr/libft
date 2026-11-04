@@ -6,12 +6,13 @@
 /*   By: mamatter <mamatter@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/21 16:08:08 by mamatter          #+#    #+#             */
-/*   Updated: 2026/10/26 10:25:10 by mamatter         ###   ########.fr       */
+/*   Updated: 2026/11/04 16:35:35 by mamatter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/* Finds a byte in a memory area. */
 void	*ft_memchr(const void *s, int c, size_t n)
 {
 	size_t	i;

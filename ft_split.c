@@ -6,12 +6,14 @@
 /*   By: mamatter <mamatter@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/23 10:07:55 by mamatter          #+#    #+#             */
-/*   Updated: 2026/10/27 15:50:30 by mamatter         ###   ########.fr       */
+/*   Updated: 2026/11/04 17:59:06 by mamatter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
+/* Returns the number of words using a separator */
 static int	count_word(char const *s, char c)
 {
 	int	len;
@@ -35,23 +37,7 @@ static int	count_word(char const *s, char c)
 	return (len);
 }
 
-static char	*select_str(const char *src, unsigned int start, unsigned int end)
-{
-	unsigned int	i;
-	char			*dest;
-
-	i = 0;
-	dest = ft_calloc((end - start + 1), sizeof(char));
-	if (!dest)
-		return (NULL);
-	while (start + i != end && src[i])
-	{
-		dest[i] = src[start + i];
-		i++;
-	}
-	return (dest);
-}
-
+/* Free all instances in the array */
 static char	**free_all(char **lst, int size)
 {
 	while (size > 0)
@@ -60,16 +46,15 @@ static char	**free_all(char **lst, int size)
 		free(lst[size]);
 	}
 	free(lst);
-	return (NULL);
+	return (lst);
 }
 
-static char	**fill(char **lst, char const *s, char c)
+/* Create an array containing the words */
+static char	**fill(char **lst, char const *s, char c, int i)
 {
-	int	i;
 	int	start;
 	int	a;
 
-	i = 0;
 	a = 0;
 	while (s[i])
 	{
@@ -77,27 +62,33 @@ static char	**fill(char **lst, char const *s, char c)
 		{
 			start = i;
 			while (s[i] && s[i] != c)
-				i++;
-			lst[a] = select_str(s, start, i);
+				i += 1;
+			lst[a] = ft_substr(s, start, i - start);
 			if (!lst[a])
-				return (free_all(lst, a));
+			{
+				lst = free_all(lst, a);
+				return (NULL);
+			}
 			a++;
 		}
 		else
-			i++;
+			i += 1;
 	}
 	return (lst);
 }
 
+/* Cuts a string at each delimiter and returns an array of strings. */
 char	**ft_split(char const *s, char c)
 {
 	char	**lst;
+	int		i;
 
+	i = 0;
 	if (!s)
 		return (NULL);
 	lst = ft_calloc(count_word(s, c) + 1, sizeof(char *));
 	if (!lst)
 		return (NULL);
-	lst = fill(lst, s, c);
+	lst = fill(lst, s, c, i);
 	return (lst);
 }

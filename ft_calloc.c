@@ -3,15 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mamatter <mamatter@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mamatter <mamatter@student.42angouleme.fr> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/10/22 09:49:37 by mamatter          #+#    #+#             */
-/*   Updated: 2026/10/26 11:29:53 by mamatter         ###   ########.fr       */
+/*   Created: 2026/10/29 11:33:29 by mamatter          #+#    #+#             */
+/*   Updated: 2026/11/04 16:23:15 by mamatter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/* Allocates memory and sets it to zero. */
 void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*ptr;

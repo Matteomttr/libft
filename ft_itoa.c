@@ -6,12 +6,13 @@
 /*   By: mamatter <mamatter@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/23 15:59:22 by mamatter          #+#    #+#             */
-/*   Updated: 2026/11/03 13:27:14 by mamatter         ###   ########.fr       */
+/*   Updated: 2026/11/04 16:32:02 by mamatter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/* Reverse a character string. */
 static char	*ft_rev_int_tab(char *tab, int size)
 {
 	int		first;
@@ -31,6 +32,7 @@ static char	*ft_rev_int_tab(char *tab, int size)
 	return (tab);
 }
 
+/* Returns the length of a integer. */
 static int	nbrlen(int nb)
 {
 	int	len;
@@ -48,6 +50,7 @@ static int	nbrlen(int nb)
 	return (len);
 }
 
+/* Converts an integer into a string. */
 static char	*reelitoa(char *str, int n, int *i, int len)
 {
 	if (n < 0)
@@ -64,6 +67,7 @@ static char	*reelitoa(char *str, int n, int *i, int len)
 	return (str);
 }
 
+/* Verification for converts an integer into a string. */
 char	*ft_itoa(int n)
 {
 	char	*str;

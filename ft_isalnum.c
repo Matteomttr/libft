@@ -6,16 +6,16 @@
 /*   By: mamatter <mamatter@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/20 09:50:46 by mamatter          #+#    #+#             */
-/*   Updated: 2026/10/28 10:24:42 by mamatter         ###   ########.fr       */
+/*   Updated: 2026/11/04 16:24:26 by mamatter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
+/* Checks if a character is a letter or a digit. */
 int	ft_isalnum(int c)
 {
-	if ((c >= 65 && c <= 90)
-		|| (c >= 97 && c <= 122))
-		return (1);
-	if (c >= 48 && c <= 57)
+	if (ft_isalpha(c) || ft_isdigit(c))
 		return (1);
 	return (0);
 }

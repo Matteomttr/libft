@@ -6,12 +6,13 @@
 /*   By: mamatter <mamatter@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/20 10:15:54 by mamatter          #+#    #+#             */
-/*   Updated: 2026/10/29 11:16:14 by mamatter         ###   ########.fr       */
+/*   Updated: 2026/11/04 16:40:08 by mamatter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/* Fills a memory area with one byte. */
 void	*ft_memset(void *s, int c, size_t n)
 {
 	size_t			i;

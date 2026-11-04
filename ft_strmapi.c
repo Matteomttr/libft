@@ -6,23 +6,22 @@
 /*   By: mamatter <mamatter@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/23 17:48:40 by mamatter          #+#    #+#             */
-/*   Updated: 2026/10/26 15:54:03 by mamatter         ###   ########.fr       */
+/*   Updated: 2026/11/04 17:00:10 by mamatter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/* Applies a function to each character and returns the new string. */
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	char	*str;
 	int		i;
-	int		len;
 
 	if (!s || !f)
 		return (NULL);
 	i = 0;
-	len = ft_strlen(s) + 1;
-	str = ft_calloc(len, sizeof(char));
+	str = ft_calloc(ft_strlen(s) + 1, sizeof(char));
 	if (!str)
 		return (NULL);
 	while (s[i])

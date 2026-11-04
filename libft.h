@@ -6,22 +6,25 @@
 /*   By: mamatter <mamatter@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/20 11:06:08 by mamatter          #+#    #+#             */
-/*   Updated: 2026/11/03 13:29:04 by mamatter         ###   ########.fr       */
+/*   Updated: 2026/11/04 17:54:27 by mamatter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
+/* inclusion of necessary libraries */
 # include <unistd.h>
 # include <stdlib.h>
 
+/* Structure of the linked list t_list */
 typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
 }	t_list;
 
+/* Function of the first part */
 int				ft_isalpha(int c);
 int				ft_isdigit(int c);
 int				ft_isalnum(int c);
@@ -46,6 +49,7 @@ int				ft_atoi(const char *nptr);
 void			*ft_calloc(size_t nmemb, size_t size);
 char			*ft_strdup(const char *s);
 
+/* Function of the second part */
 char			*ft_substr(char const *s, unsigned int start, size_t len);
 char			*ft_strjoin(char const *s1, char const *s2);
 char			*ft_strtrim(char const *s1, char const *set);
@@ -58,6 +62,7 @@ void			ft_putstr_fd(char *s, int fd);
 void			ft_putendl_fd(char *s, int fd);
 void			ft_putnbr_fd(int n, int fd);
 
+/* Function of the third part */
 t_list			*ft_lstnew(void *content);
 void			ft_lstadd_front(t_list **lst, t_list *new);
 unsigned int	ft_lstsize(t_list *lst);
@@ -69,6 +74,7 @@ void			ft_lstiter(t_list *lst, void (*f)(void *));
 t_list			*ft_lstmap(t_list *lst, void *(*f)(void *),
 					void (*del)(void *));
 
+/* optional feature to add personally */
 char			*ft_strcat(char *dest, const char *src);
 char			*ft_strcpy(char *dest, const char *src);
 
