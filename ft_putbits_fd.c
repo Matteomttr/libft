@@ -29,7 +29,7 @@ void	ft_putbits_fd(unsigned char c, int fd)
 			sum *= 2;
 			exp++;
 		}
-  sum /= c;
+		sum /= c;
 		if (sum % 2 == 1)
 			ft_putchar_fd('1', fd);
 		else
