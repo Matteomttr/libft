@@ -55,6 +55,7 @@ SRCS=	ft_isalpha.c \
 		ft_lstmap.c \
 		ft_strcat.c \
 		ft_strcpy.c \
+		ft_putbits_fd.c \
 
 # List of .o files
 OBJS= $(SRCS:.c=.o)

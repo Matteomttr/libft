@@ -6,7 +6,7 @@
 /*   By: mamatter <mamatter@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/23 10:07:55 by mamatter          #+#    #+#             */
-/*   Updated: 2026/11/04 17:59:06 by mamatter         ###   ########.fr       */
+/*   Updated: 2026/11/05 17:57:33 by mamatter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ static char	**free_all(char **lst, int size)
 		free(lst[size]);
 	}
 	free(lst);
-	return (lst);
+	return (NULL);
 }
 
 /* Create an array containing the words */

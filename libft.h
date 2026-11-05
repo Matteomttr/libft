@@ -77,5 +77,6 @@ t_list			*ft_lstmap(t_list *lst, void *(*f)(void *),
 /* optional feature to add personally */
 char			*ft_strcat(char *dest, const char *src);
 char			*ft_strcpy(char *dest, const char *src);
+void			ft_putbits_fd(unsigned char c, int fd);
 
 #endif

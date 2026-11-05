@@ -103,6 +103,7 @@ Each function works like the original, as described in its man page.
 | `ft_putstr_fd` | Writes a string to a file descriptor. |
 | `ft_putendl_fd` | Writes a string and a newline to a file descriptor. |
 | `ft_putnbr_fd` | Writes an integer to a file descriptor. |
+| `ft_putbits_fd` | Writes the binary representation of a character to a file descriptor. |
 
 ### Part 3 - Linked lists
 
