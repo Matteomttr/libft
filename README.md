@@ -77,6 +77,7 @@ Each function works like the original, as described in its man page.
 | `ft_strchr` | Finds the first occurrence of a character in a string. |
 | `ft_strrchr` | Finds the last occurrence of a character in a string. |
 | `ft_strncmp` | Compares two strings, up to `n` characters. |
+| `ft_strncpy` | Copies a string into a buffer, up to `n` characters. |
 | `ft_strnstr` | Finds a substring in a string, within `len` characters. |
 | `ft_strdup` | Returns a new copy of a string. |
 | `ft_atoi` | Converts the start of a string into an `int`. |
