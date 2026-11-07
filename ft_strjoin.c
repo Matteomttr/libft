@@ -6,7 +6,7 @@
 /*   By: mamatter <mamatter@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/22 14:01:42 by mamatter          #+#    #+#             */
-/*   Updated: 2026/11/04 16:56:19 by mamatter         ###   ########.fr       */
+/*   Updated: 2026/11/07 11:56:28 by mamatter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	if (!s1 || !s2)
 		return (NULL);
 	str = ft_calloc(sizeof(char), ft_strlen(s1) + ft_strlen(s2) + 1);
-	if (str == NULL)
+	if (!str)
 		return (NULL);
 	str = ft_strcat(str, (char *)s1);
 	str = ft_strcat(str, (char *)s2);
