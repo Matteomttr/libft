@@ -6,7 +6,7 @@
 /*   By: mamatter <mamatter@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/23 10:07:55 by mamatter          #+#    #+#             */
-/*   Updated: 2026/11/05 17:57:33 by mamatter         ###   ########.fr       */
+/*   Updated: 2026/11/16 15:43:33 by mamatter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <stdlib.h>
 
 /* Returns the number of words using a separator */
-static int	count_word(char const *s, char c)
+static int	ft_count_word(char const *s, char c)
 {
 	int	len;
 	int	i;
@@ -38,7 +38,7 @@ static int	count_word(char const *s, char c)
 }
 
 /* Free all instances in the array */
-static char	**free_all(char **lst, int size)
+static char	**ft_free_all(char **lst, int size)
 {
 	while (size > 0)
 	{
@@ -50,7 +50,7 @@ static char	**free_all(char **lst, int size)
 }
 
 /* Create an array containing the words */
-static char	**fill(char **lst, char const *s, char c, int i)
+static char	**ft_fill(char **lst, char const *s, char c, int i)
 {
 	int	start;
 	int	a;

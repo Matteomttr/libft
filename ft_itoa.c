@@ -6,7 +6,7 @@
 /*   By: mamatter <mamatter@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/23 15:59:22 by mamatter          #+#    #+#             */
-/*   Updated: 2026/11/04 16:32:02 by mamatter         ###   ########.fr       */
+/*   Updated: 2026/11/16 15:43:06 by mamatter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ static char	*ft_rev_int_tab(char *tab, int size)
 }
 
 /* Returns the length of a integer. */
-static int	nbrlen(int nb)
+static int	ft_nbrlen(int nb)
 {
 	int	len;
 
@@ -51,7 +51,7 @@ static int	nbrlen(int nb)
 }
 
 /* Converts an integer into a string. */
-static char	*reelitoa(char *str, int n, int *i, int len)
+static char	*ft_reelitoa(char *str, int n, int *i, int len)
 {
 	if (n < 0)
 		n = -n;
@@ -75,7 +75,7 @@ char	*ft_itoa(int n)
 	int		i;
 
 	i = 0;
-	len = nbrlen(n);
+	len = ft_nbrlen(n);
 	str = ft_calloc((len + 1), sizeof(char));
 	if (!str)
 		return (NULL);
@@ -84,7 +84,7 @@ char	*ft_itoa(int n)
 		ft_strcpy(str, "-2147483648");
 		return (str);
 	}
-	str = reelitoa(str, n, &i, len);
+	str = ft_reelitoa(str, n, &i, len);
 	if (n < 0)
 		str[i - 1] = '-';
 	str = ft_rev_int_tab(str, len);
