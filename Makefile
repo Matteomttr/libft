@@ -9,7 +9,7 @@ CFLAGS= -Wall -Werror -Wextra
 AR= ar
 ARFLAGS= rsc
 
-# List of .c files
+# List of srcs files
 SRCS=	ft_isalpha.c \
 		ft_isdigit.c \
 		ft_isalnum.c \
@@ -58,7 +58,7 @@ SRCS=	ft_isalpha.c \
 		ft_putbits_fd.c \
 		ft_strncpy.c \
 
-# List of .o files
+# List of objects files
 OBJS= $(SRCS:.c=.o)
 
 # Compile everything
@@ -66,21 +66,24 @@ all: $(NAME)
 
 # Compile everything into an archive
 $(NAME): $(OBJS)
-	$(AR) $(ARFLAGS) $@ $^
+	@$(AR) $(ARFLAGS) $(NAME) $(OBJS)
+	@echo "Archive created successfully!"
 
-# Converts .c files to .o files
+# Converts srcs files to object files
 %.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@
+	@$(CC) $(CFLAGS) -c $< -o $@
 
-# Delete all .o files
+# Delete all objects files
 clean:
-	rm -f $(OBJS)
+	@rm -f $(OBJS)
+	@echo "Object successfully deleted!"
 
-# Delete all .o files and libft.a
+# Delete all objects files and libft.a
 fclean: clean
-	rm -f $(NAME)
+	@rm -f $(NAME)
+	@echo "Archive successfully deleted!"
 
-# Delete all .o files and libft.a, then recompile everything into an archive.
+# Delete all objects files and libft.a, then recompile everything into an archive.
 re: fclean all
 
 .PHONY: all clean fclean re

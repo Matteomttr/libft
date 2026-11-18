@@ -6,7 +6,7 @@
 /*   By: mamatter <mamatter@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/23 10:07:55 by mamatter          #+#    #+#             */
-/*   Updated: 2026/11/16 15:43:33 by mamatter         ###   ########.fr       */
+/*   Updated: 2026/11/18 10:16:33 by mamatter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ static char	**ft_fill(char **lst, char const *s, char c, int i)
 			lst[a] = ft_substr(s, start, i - start);
 			if (!lst[a])
 			{
-				lst = free_all(lst, a);
+				lst = ft_free_all(lst, a);
 				return (NULL);
 			}
 			a++;
@@ -86,9 +86,9 @@ char	**ft_split(char const *s, char c)
 	i = 0;
 	if (!s)
 		return (NULL);
-	lst = ft_calloc(count_word(s, c) + 1, sizeof(char *));
+	lst = ft_calloc(ft_count_word(s, c) + 1, sizeof(char *));
 	if (!lst)
 		return (NULL);
-	lst = fill(lst, s, c, i);
+	lst = ft_fill(lst, s, c, i);
 	return (lst);
 }
