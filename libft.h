@@ -64,10 +64,10 @@ void			ft_putnbr_fd(int n, int fd);
 
 /* Function of the third part */
 t_list			*ft_lstnew(void *content);
-void			ft_lstadd_front(t_list **lst, t_list *new);
+void			ft_lstadd_front(t_list **lst, t_list *new_lst);
 unsigned int	ft_lstsize(t_list *lst);
 t_list			*ft_lstlast(t_list *lst);
-void			ft_lstadd_back(t_list **lst, t_list *new);
+void			ft_lstadd_back(t_list **lst, t_list *new_lst);
 void			ft_lstdelone(t_list *lst, void (*del)(void *));
 void			ft_lstclear(t_list **lst, void (*del)(void *));
 void			ft_lstiter(t_list *lst, void (*f)(void *));
@@ -79,5 +79,6 @@ char			*ft_strcat(char *dest, const char *src);
 char			*ft_strcpy(char *dest, const char *src);
 void			ft_putbits_fd(unsigned char c, int fd);
 char			*ft_strncpy(char *dest, const char *src, size_t n);
+int				ft_strcmp(const char *s1, const char *s2);
 
 #endif
