@@ -6,7 +6,7 @@
 /*   By: mamatter <mamatter@student.42angouleme.fr> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/05 17:49:58 by mamatter          #+#    #+#             */
-/*   Updated: 2026/11/06 09:55:39 by mamatter         ###   ########.fr       */
+/*   Updated: 2026/11/18 10:29:15 by mamatter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ void	ft_putbits_fd(unsigned char c, int fd)
 	int	sum;
 
 	i = 7;
+	if (fd < 0)
+		return ;
 	while (i >= 0)
 	{
 		exp = 0;
